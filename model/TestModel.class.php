@@ -6,6 +6,7 @@
 
 class TestModel extends Model{
     public function getList() {
-        return $this->query("select * from test");
+        $rst = $this->query("select * from test");
+        return $rst->fetchAll();
     }
 } 
