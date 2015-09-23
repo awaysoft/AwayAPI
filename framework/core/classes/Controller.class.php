@@ -25,7 +25,7 @@ class Controller {
      */
     private function _arrayGet($key, $filterFunction, $defaultValue, $array) {
         if (array_key_exists($key, $array)) {
-            $value = $array['key'];
+            $value = $array[$key];
             /* 对数据处理 */
             if ($filterFunction !== null) {
                 if (function_exists($filterFunction)) {
